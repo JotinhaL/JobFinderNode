@@ -1,0 +1,23 @@
+[33mcommit 760f7ffb659318cce3b69aac4c2ddaaec11c5804[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: João Lucas Nascimento <johnascimentom@hotmail.com>
+Date:   Mon Dec 7 14:29:30 2020 -0300
+
+    interacao handlebars com express
+
+[33mcommit 3193a35f1802175399145b102059cbd0250195d2[m
+Author: João Lucas Nascimento <johnascimentom@hotmail.com>
+Date:   Fri Dec 4 16:03:40 2020 -0300
+
+    Database/Routes/Public/Models
+
+[33mcommit 12e9f8ea18c0b3b110d79cb6b8785ece598870fd[m
+Author: João Lucas Nascimento <johnascimentom@hotmail.com>
+Date:   Thu Dec 3 16:38:57 2020 -0300
+
+    Commit inicial
+
+[33mcommit 2fb34a7eec1c62f8d510a9c62ea227a15b809720[m
+Author: JotinhaL <68445631+JotinhaL@users.noreply.github.com>
+Date:   Thu Dec 3 16:20:54 2020 -0300
+
+    Initial commit
