@@ -5,6 +5,9 @@ const path = require('path')
 const app = express()
 const db = require('./db/connection')
 const bodyParser = require('body-parser')
+const Job = require('./models/Job')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op;
 
 //inicializando servidor na porta 8080
 const PORT = 8080;
@@ -33,7 +36,35 @@ db.authenticate().then(() =>{
 
 //Routes
 app.get('/', (req,res) =>{
-    res.render('index')
+
+    let search = req.query.job;
+    let query = '%'+search+'%'; //PH -> PHP, Word -> Wordpress
+
+    if(!search){
+        Job.findAll({order: [
+            ['createdAt', 'DESC']
+        ]})
+        .then(jobs => {
+            res.render('index',{
+                jobs
+            })
+        })
+        .catch(err => console.log(err))
+    } else{
+        Job.findAll({
+            where: {title: {[Op.like]: query}}, 
+            order: [
+                ['createdAt', 'DESC']
+        ]})
+        .then(jobs => {
+            res.render('index',{
+                jobs, search
+            })
+        })
+        .catch(err => console.log(err))
+    }
+
+
 });
 
 //jobs routes
